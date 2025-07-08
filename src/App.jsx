@@ -25,18 +25,26 @@ const App = () => {
         setSession(session);
       }
     );
+
+    return () => subscription.unsubscribe();
+
+
+
+  }, []); // Empty array means this effect runs only once on mount
+
+  useEffect(() => {
+    // Fetch goals once session exists
+    if(session) {
     
-    // // Call the function
+    // Call the function
     const fetchInitialGoals = async () => {
       const initialGoals = await getGoals();
       setGoals(initialGoals);
     }
 
     fetchInitialGoals();
-
-    return () => subscription.unsubscribe();
-
-  }, []); // Empty array means this effect runs only once on mount
+    }
+  }, [session])
 
   const handleAddGoal = async (goalText, due_date, priority) => {
 
