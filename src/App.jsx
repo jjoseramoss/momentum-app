@@ -91,8 +91,6 @@ const App = () => {
 
   if(!session){
     return <LoginPage />
-  } else{
-
   }
 
   return (

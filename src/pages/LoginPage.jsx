@@ -91,14 +91,14 @@ const LoginPage = () => {
                     <p>most goal apps are bloated.</p>
                     <p>charts, graphs, notifications, streaks, badges...</p>
                     <p className="text-white">we believe in simplicity.</p>
-                    <p>set it. track it. achieve it.</p>
+                    <p>set it. track it.</p>
                   </div>
                 </div>
 
                 <div className="border-l-2 border-teal-400/30 pl-6">
-                  <div className="text-sm text-gray-500 mb-2">current users</div>
-                  <div className="text-2xl font-light">2,847</div>
-                  <div className="text-xs text-gray-600">goals completed this week</div>
+                  <div className="text-sm text-gray-500 mb-2"></div>
+                  <div className="text-2xl font-light">ACHIEVE IT.</div>
+                  <div className="text-xs text-gray-600"></div>
                 </div>
               </div>
 
@@ -121,7 +121,7 @@ const LoginPage = () => {
                         supabaseClient={supabase}
                         appearance={{ theme: ThemeSupa}}
                         theme='dark'
-                        providers={['github']} //Optional: allow login with github 
+                        providers="" //Optional: allow login with github 
                     />
                   </div>
 
